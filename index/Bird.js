@@ -1,6 +1,7 @@
 var verticalVelocity = 0;
-var gravity = 9.8;
+var gravity = 1.2;
 var isJumping = false;
+var characterGround = 600;
 export default class Bird {
   
   constructor (gameWidth, gameHeight) {
@@ -17,27 +18,25 @@ export default class Bird {
   }
 
   draw(ctx) {
-    ctx.fillStyle = '#0000FF';
+    ctx.fillStyle = '#0000FF';   
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
+
   update(dt) {
     if(!dt) return;
     this.position.x += 5/dt;
-    if (isJumping) {
-      yVel += gravity;
-      this.position.y += yVel;
-          if (this.position.y > characterGround) {
-              this.position.y = characterGround;
-              yVel = 0;
-              isJumping = false;
-             }
-      }
+    verticalVelocity += gravity;
+    this.position.y += verticalVelocity;
+    if (this.position.y > characterGround - this.height) {
+        this.position.y = characterGround - this.height;
+        verticalVelocity = 0;
+    }
   }
   
   jump() {
-    if(isJumping == false) {
+    
       verticalVelocity = -15;
-      isJumping = true;
-    }
+      
+
   }
 }
