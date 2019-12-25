@@ -1,5 +1,5 @@
 var verticalVelocity = 0;
-var gravity = 1.2;
+var gravity = 0.3;
 var isJumping = false;
 var characterGround = 600;
 export default class Bird {
@@ -27,16 +27,13 @@ export default class Bird {
     this.position.x += 5/dt;
     verticalVelocity += gravity;
     this.position.y += verticalVelocity;
-    if (this.position.y > characterGround - this.height) {
+    if (this.position.y > characterGround - this.he) {
         this.position.y = characterGround - this.height;
         verticalVelocity = 0;
     }
   }
   
   jump() {
-    
-      verticalVelocity = -15;
-      
-
+      verticalVelocity = -10;
   }
 }
