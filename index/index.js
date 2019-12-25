@@ -1,8 +1,13 @@
-let canvas = document.getElementById("gameScreen");
-let ctx = canvas.getContext('2d');
+import Bird from 'Bird.js';
 
-ctx.fillStyle= '#f00';
-ctx.fillRect(20, 20, 100, 100);
+var canvas = document.getElementById("gameScreen");
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = '#00f'
-ctx.fillRect(200. 200, 50, 50);
+const GAME_WIDTH = 800;
+const GAME_HEIGHT = 600;
+
+ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+
+let bird = new Bird(GAME_WIDTH, GAME_HEIGHT);
+
+bird.draw(ctx);
