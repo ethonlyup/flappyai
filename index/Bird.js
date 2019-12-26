@@ -2,15 +2,16 @@ var verticalVelocity = 0;
 var gravity = 0.3;
 var isJumping = false;
 var characterGround = 600;
+
 export default class Bird {
   
   constructor (gameWidth, gameHeight) {
-    this.width = 150;
-    this.height = 100;
+    this.width = 75;
+    this.height = 50;
 
     this.position = {
 
-      x: gameWidth - this.width - (790-this.width),
+      x: gameWidth - this.width - (790 - this.width),
 
       y: gameHeight / 2 - this.height / 2
 
@@ -27,7 +28,7 @@ export default class Bird {
     this.position.x += 5/dt;
     verticalVelocity += gravity;
     this.position.y += verticalVelocity;
-    if (this.position.y > characterGround - this.he) {
+    if (this.position.y > characterGround - this.height) {
         this.position.y = characterGround - this.height;
         verticalVelocity = 0;
     }

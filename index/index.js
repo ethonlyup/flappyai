@@ -28,11 +28,22 @@ function gameLoop(timeStamp) {
     ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
     bird.update(dt);
     bird.draw(ctx);
-    if(bird.position.y >= GAME_HEIGHT - bird.height / 2){
-        alert("rip gayboy");
-        return;
+    if(bird.position.y >= GAME_HEIGHT - bird.height ) {
+        
+        ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+        bird.position.x = GAME_WIDTH - bird.width - (790 - bird.width);
+        bird.position.y = GAME_HEIGHT / 2 - bird.height / 2;
+        bird.update(dt);
+        bird.draw(ctx);
+        timeStamp = 0;
+        lastTime = 0;
+        dt = 0;
+        
+        gameLoop();
     }
+    else {
     requestAnimationFrame(gameLoop);
+    }
 }
 
 gameLoop();
