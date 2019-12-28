@@ -8,7 +8,7 @@ export default class Bird {
       x: gameWidth - this.width - 10,
 
       y: gameHeight / 2 - this.height / 2
-
+      
     };
   }
 

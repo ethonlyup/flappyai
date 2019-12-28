@@ -1,4 +1,4 @@
-import Bird from 'Bird.js';
+import Bird from '/Bird.js';
 
 var canvas = document.getElementById("gameScreen");
 var ctx = canvas.getContext("2d");
