@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-export default class Bird {
-  constructor (gameWidth, gameHeight) {
-    this.width = 150;
-    this.height = 100;
-
-    this.position = {
-
-      x: gameWidth - this.width - 10,
-
-      y: gameHeight / 2 - this.height / 2
-      
-    };
-  }
-
-  draw(ctx) {
-    ctx.fillStyle = '#0000FF';
-    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
-  }
-}
-=======
 var verticalVelocity = 0;
 var gravity = 0.3;
 var isJumping = false;
@@ -59,4 +38,3 @@ export default class Bird {
       verticalVelocity = -10;
   }
 }
->>>>>>> 1467bef31ff8dd28bc26c45bba2f3e7254ea1dee
