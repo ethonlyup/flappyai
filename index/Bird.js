@@ -11,7 +11,7 @@ export default class Bird {
 
     this.position = {
 
-      x: gameWidth - this.width - (790 - this.width),
+      x: gameWidth - this.width - (500 - this.width),
 
       y: gameHeight / 2 - this.height / 2
 
@@ -19,13 +19,13 @@ export default class Bird {
   }
 
   draw(ctx) {
-    ctx.fillStyle = '#00000';   
+    ctx.fillStyle = '#ff0000';   
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
   update(dt) {
     if(!dt) return;
-    this.position.x += 5/dt;
+    // this.position.x += 5/dt;
     verticalVelocity += gravity;
     this.position.y += verticalVelocity;
     if (this.position.y > characterGround - this.height) {
