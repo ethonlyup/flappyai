@@ -19,7 +19,7 @@ export default class Bird {
   }
 
   draw(ctx) {
-    ctx.fillStyle = '#0000FF';   
+    ctx.fillStyle = '#0000FF';
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
