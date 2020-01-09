@@ -1,4 +1,4 @@
-import Bird from '/index/Bird.js';
+import Bird from '/Bird.js';
 export default class InputHandler {
 
     constructor(bird){
