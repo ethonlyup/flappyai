@@ -1,6 +1,6 @@
 //imports
-import Bird from '/index/Bird.js';//importing bird
-import InputHandler from '/index/input.js';//importing the input handler
+import Bird from '/Bird.js';//importing bird
+import InputHandler from '/input.js';//importing the input handler
 //end of imports
 
 //canvas statements
@@ -37,7 +37,7 @@ function gameLoop(timeStamp) {
         dt = 0;
         
         alert('GG you ded');//RIP
-        startGame();//new game
+        gameLoop();
     }
     else {
     requestAnimationFrame(gameLoop);
@@ -45,3 +45,4 @@ function gameLoop(timeStamp) {
 }
 
 gameLoop();
+
