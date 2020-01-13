@@ -11,7 +11,7 @@ Once you have all the modules installed, just run
 ```python flappybird.py```
 The game should start and you'll see the birds progressing through generations
 
-If you're interested in changing population sizes to get more better results, faster. Change the
+If you're interested in changing population sizes to get better(or worse) results. Change the
 ```pop_size``` parameter in config-feedforward.txt
 
 Also, if you'd like to see the bird break the game entirely, on line 266 remove the OR statement including the conditional that comes after that.
