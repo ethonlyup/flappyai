@@ -8,7 +8,7 @@ Make sure to run the following line or neat will not work with this code.
 ```pip install neat=0.92```
 
 Once you have all the modules installed, just run 
-```python flappyai.py```
+```python flappybirdai.py```
 The game should start and you'll see the birds progressing through generations
 
 If you're interested in changing population sizes to get more better results, faster. Change the
