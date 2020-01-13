@@ -21,5 +21,5 @@ should be
 ```if bird.y + bird.img.get_height() >= 730:```
 If you want your bird to hack the game.
 
-This was created using ```Tech with tim```'s guide on youtube, you should chceck him out!
+This was created using ```Tech with tim```'s guide on youtube, you should check him out!
 
